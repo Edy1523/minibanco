@@ -76,7 +76,7 @@ enlazamos y subimos cambios al repositorio
 ```
 git push origin
 ```
-para lo anterior deben poner su usuario de github y una contraseña, paro esta contraseña debe ser un token
+para lo anterior aveces pide su usuario de github y una contraseña, si pasa entonces para esta contraseña debe ser un token
 entonces van a (settings,developer settings,personal access token, tokens classic, generate new token)
 por ultimo le da los permisos necesarios al token par que funcione como contraseña de un repositorio
 lo genera lo copia y lo pega en la contraseña y listo todo debe quedar subido en el github
