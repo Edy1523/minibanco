@@ -2,7 +2,7 @@ import sqlite3
 
 class HandleUsers:
     def __init__(self) -> None:
-        self._con = sqlite3.connect("/home/edy1523/personalProjects/web/minibanco.db", check_same_thread=False)
+        self._con = sqlite3.connect("minibanco.db", check_same_thread=False)
         self._cur = self._con.cursor()
     
     def get_all_users(self):
@@ -29,7 +29,7 @@ class HandleUsers:
     
 class HandleAccounts:
     def __init__(self) -> None:
-        self._con = sqlite3.connect("/home/edy1523/personalProjects/web/minibanco.db", check_same_thread=False)
+        self._con = sqlite3.connect("minibanco.db", check_same_thread=False)
         self._cur = self._con.cursor()
     
     def get_all_accounts(self):
@@ -63,7 +63,7 @@ class HandleAccounts:
         
 class HandleTransactions:
     def __init__(self) -> None:
-        self._con = sqlite3.connect("/home/edy1523/personalProjects/web/minibanco.db",check_same_thread=False)
+        self._con = sqlite3.connect("minibanco.db",check_same_thread=False)
         self._cur = self._con.cursor()
     
     def get_all_transactions(self):
