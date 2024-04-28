@@ -75,12 +75,23 @@ class HandleTransactions:
         return data.fetchone()
     
     def insert_transaction(self, data_transaction):
-        self._cur.execute("INSERT INTO transactions VALUES('{}','{}','{}')".format(
+        self._cur.execute("INSERT INTO transactions VALUES('{}','{}','{}','{}')".format(
             data_transaction["id_transaction"],
             data_transaction["id_receive"],
+            data_transaction["type_transaction"],
             data_transaction["money_transaction"]
         ))
         self._con.commit()
         
     def __del__(self):
         self._con.close()
+        
+"""data = {
+    "id_transaction" : 0,
+    "id_receive":0,
+    "type_transaction":'N',
+    "money_transaction":666
+}
+
+db = HandleTransactions()
+db.insert_transaction(data)"""

@@ -1,9 +1,9 @@
 {% extends "components/layout.html" %}
 
-{% block title %}Make a transaction{% endblock %}
+{% block title %}Transaction{% endblock %}
 {% block content %}
     <div class="row m-md-5 m-3">
-        <h1 class="col">FastAPI Form</h1>
+        <h1 class="col">Realizando transacción a otra cuenta bancaria</h1>
     </div>
 
     <form method="post" action="/transaction-processing" class="row g-3 mx-sm-5 mx-2">
@@ -21,6 +21,14 @@
         <div class="col-md-4">
             <label for="validationDefault02" class="form-label">Id de la cuenta a la que va a consignar</label>
             <input name="id_receive" type="text" class="form-control" id="validationDefault02" required />
+        </div>
+        <div class="col-md-3">
+            <label for="validationDefault01" class="form-label">Es una transacción interbancaria</label>
+            <select name="type_transaction" class="form-select" id="validationDefault01" required>
+                <option selected disabled value="">Choose...</option>
+                <option value="Y">Si</option>
+                <option value="N">No</option>
+            </select>
         </div>
         <div class="col-md-4">
             <label for="validationDefault03" class="form-label">Cantidad de dinero que va a consignar</label>

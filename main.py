@@ -91,12 +91,13 @@ def account_processing(type_account:str=Form(),money_account:str=Form() ,passwor
     return RedirectResponse("/new-home")
 
 @app.post("/transaction-processing", response_class=HTMLResponse)
-def transaction_processing(type_account:str=Form(),id_receive:str=Form(), money_transaction:str=Form(), password_account:str=Form()):
+def transaction_processing(type_account:str=Form(),id_receive:str=Form(),type_transaction:str=Form() ,money_transaction:str=Form(), password_account:str=Form()):
     data_transaction = {
         "id_receive":id_receive,
+        "type_transaction":type_transaction,
         "money_transaction":money_transaction
     } #Aqui se hace la misma validacion de contrasena y del dinero de la cuenta
-    verify_money = less_money_account(money_transaction, type_account, password_account)
+    verify_money = less_money_account(money_transaction, type_account, password_account, type_transaction)
     if verify_money:
         db = Transaction(data_transaction)
         db.create_transaction()
