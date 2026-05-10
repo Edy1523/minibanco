@@ -53,6 +53,13 @@ class HandleAccounts:
         ))
         self._con.commit()
     
+    def delete_account(self, type_account):
+        self._cur.execute(
+            "DELETE FROM accounts WHERE type_account = ?",
+            (type_account,)
+        )
+        self._con.commit()
+    
     def update_account(self,money_account ,type_account):
         data = self._cur.execute("UPDATE accounts SET money_account = '{}' WHERE type_account = '{}'".format(money_account,type_account))
         self._con.commit()

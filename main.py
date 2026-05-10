@@ -43,6 +43,12 @@ def user(req:Request):
 def account(request:Request):
     return template.TemplateResponse("accounts.html", {"request":request})
 
+@app.post("/delete-account")
+def delete_account(type_account: str = Form()):
+    db = Account({"type_account": type_account})
+    db.delete_account()
+    return RedirectResponse("/new-home", status_code=303) #Se agregua status_code=303 porque FastAPI recomienda en la documentacion eso después de POST + Redirect.
+
 @app.get("/transactions", response_class=HTMLResponse)
 def transaction(request:Request):
     return template.TemplateResponse("transactions.html", {"request":request})

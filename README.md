@@ -1,7 +1,7 @@
 # proyecto del minibanco
 
-primero crean el entorno virtual usando pip, eso lo explican en el video del canal de Gregory Vicent que les voy
-a enviar para que se puedan guiar de lo que hice, estas son las lineas para instalar y ejecitar pip
+Para poder usar la app en local, deben de crear un entorno virtual de su agrado ya sea Conda o directamente venv.
+Para despues descargar todas las dependencias usadas en la app com pip.
 
 instalan pip
 ```
@@ -18,7 +18,7 @@ deactivate
 ```
 
 este es el codigo para instalar todas librerias que yo use en el proyecto, estan almacenadas en el archivo
-requirements.txt, deben usar pip para descargarlas todas de una vez con el archivo
+requirements.txt, deben usar pip para descargarlas todas de una vez con el archivo.
 ```
 pip3 install -r requirements.txt
 ```
@@ -49,12 +49,12 @@ instalan las librerias
 ```
 pip3 install -r requirements.txt
 ```
-ejecutan el siguiente codigo para abrir el servidor web que hace funcionar el proyecto, esto tambien sale en el video que les envio
+PARA DESPLEGAR LA APP EN LOCAL EJECUTAN EL SIGUIENTE ARCHIVO EN LA TERMINAL CON EL ENTORNO VIRTUAL ACTIVADO Y LAS DEPENDENCIAS DESCARGADAS
 ```
 uvicorn main:app --reload
 ```
 
-Por ultimo para subir todo en el github siguen estos pasos:
+Por último si se requiere subir todo en el github, siguen estos pasos:
 
 subimos los archivos al repositorio
 ```
@@ -79,4 +79,4 @@ git push origin
 para lo anterior aveces pide su usuario de github y una contraseña, si pasa entonces para esta contraseña debe ser un token
 entonces van a (settings,developer settings,personal access token, tokens classic, generate new token)
 por ultimo le da los permisos necesarios al token par que funcione como contraseña de un repositorio
-lo genera lo copia y lo pega en la contraseña y listo todo debe quedar subido en el github
+lo genera lo copia y lo pega en la contraseña y listo todo debe quedar subido en el github.

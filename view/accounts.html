@@ -36,4 +36,27 @@
             <button class="btn btn-primary" type="submit">Send Data</button>
         </div>
     </form>
+
+    <hr class="my-5">
+    <h3>Eliminar Cuenta</h3>
+
+    <form method="post" action="/delete-account" class="row g-3 mx-sm-5 mx-2">
+        <div class="col-md-4">
+            <label class="form-label">Tipo de Cuenta a Eliminar</label>
+            <select name="type_account" class="form-select" required>
+                <option selected disabled value="">Choose...</option>
+                <option value="ah">Ahorros</option>
+                <option value="co">Corriente</option>
+                <option value="ex">Expréss</option>
+                <option value="no">Nómina</option>
+                <option value="pe">Pensión</option>
+            </select>
+        </div>
+
+        <div class="col-12">
+            <button class="btn btn-danger" type="submit">
+                Eliminar Cuenta
+            </button>
+        </div>
+    </form>
 {% endblock %}
